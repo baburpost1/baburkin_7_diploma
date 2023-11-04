@@ -1,0 +1,13 @@
+page_url = 'cards_builder'
+
+input_cart_name = '[id="validationCardName"]'
+select_source = '[formcontrolname="provider"]'
+source_first = '//div[contains(text(), \'CH Visa Credit Classic (474359) (EUR)\')]'
+select_type = '[formcontrolname="type"]'
+limit_type = '//span[contains(text(), \' limit\')]'
+imput_number = '[class="p-inputtext p-component p-element p-inputnumber-input p-filled"]'
+select_limit_rule = '[formcontrolname="limit_rule"]'
+rule_monthly = '//div[contains(text(), \'monthly\')]'
+input_3d_secure_password = '[formcontrolname="secure_3d_password"]'
+button_submit = '[type="submit"]'
+block_verify_acc = '[class="warning_block mt-3 ng-tns-c153-1 ng-star-inserted"]'
