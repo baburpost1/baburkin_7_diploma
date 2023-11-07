@@ -1,3 +1,5 @@
+page_url = 'login'
+
 input_username = '[formcontrolname="username"]'
 input_password = '[formcontrolname="password"]'
 button_submit = '[class="btn btn-base signIn__button"]'
