@@ -1,19 +1,17 @@
 from selene import browser, be
-from selenium.webdriver import Keys
-
 import config
 from tests.pages import loginpage, virtual_cards, card_builder
-from tests.conftest import login_pp
+from tests.conftest import login_pp, config_browser
 
 
-def test_demomode(login_pp):
+def test_demomode(login_pp, config_browser):
     # Проверка что есть уведомлениео деморежиме
     assert browser.element(loginpage.heder_demomode).should(be.visible)
     # проверяем что не можем создать карты
-    virtual_cards_page = browser.open(f'{config.ui_base_url}/{virtual_cards.page_url}')
+    virtual_cards_page = browser.open(virtual_cards.page_url)
     virtual_cards_page.element(virtual_cards.button_create_new_card).click()
 
-    card_builder_page = browser.open(f'{config.ui_base_url}/{card_builder.page_url}')
+    card_builder_page = browser.open(card_builder.page_url)
     card_builder_page.wait_until(card_builder_page.element('[id="cube-loader"]').should(be.visible))
     card_builder_page.element(card_builder.input_cart_name).click().type('test')
     card_builder_page.element(card_builder.select_source).click()
