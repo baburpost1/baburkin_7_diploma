@@ -20,5 +20,5 @@ def test_add_wallet(login_pp, del_wallet, config_browser):
     dashboard_page.element(f'//span[contains(text(), \'{tron_wallet}\')]').click()
     dashboard_page.element(dashboard.input_hash).should(be.visible)
 
-    # Проверка что получилось ыбрать этот платёжный метод
+    # Проверка что получилось выбрать этот платёжный метод
     dashboard_page.element(dashboard.input_hash).should(be.visible)

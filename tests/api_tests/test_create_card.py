@@ -1,11 +1,13 @@
-import os
 from tests.conftest import login_session, close_session
 from utils.validations import assert_status_code
+from utils.links import get_full_api_url
+from utils.routes import ComboCards
+
 
 
 def test_create_card(login_session, close_session):
     requests = login_session
-    url_create_card = f'https://my.combo.cards/api/cards/'
+    url_create_card = f'{get_full_api_url(ComboCards.CARDS)}'
 
     body_create_card = {"name": "fdg fdgd", "frequency": "non_recurring", "amount": 10, "expiry_months": 35,
                         "quantity": 1, "note": "",

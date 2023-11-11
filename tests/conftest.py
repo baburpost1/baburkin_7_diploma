@@ -14,7 +14,7 @@ def config_browser():
     browser.driver.set_window_size(width=4000, height=2000)
 
 
-@pytest.fixture
+@pytest.fixture()
 def login_pp(config_browser):
     load_dotenv()
     login = os.getenv('LOGIN')
@@ -48,7 +48,7 @@ def return_english_language(config_browser):
 def login_session():
     load_dotenv()
     login = requests.Session()
-    login.post(url=f'{os.getenv("API_BASE_URL")}/login?fingerprint=1650830455',
+    login.post(url=f'{os.getenv("API_BASE_URL")}/auth/login?fingerprint=1650830455',
                data={'username': os.getenv('LOGIN'), 'password': os.getenv('PASSWORD')})
     return login
 

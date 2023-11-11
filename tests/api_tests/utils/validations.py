@@ -1,7 +1,7 @@
 from jsonschema import validate
-import os, json
+import os
+import json
 import allure
-from tests.api_tests.utils import routes
 
 
 def load_schema(name):
@@ -25,6 +25,4 @@ def validate_schema(current_response, schema_name):
 def assert_status_code(current_status_code, expected_status_code):
     assert current_status_code == expected_status_code, f'Current status_code == {current_status_code}; Expected status_code == {int(expected_status_code)} '
 
-def get_full_url(route):
-    a = routes(route)
-    return
+

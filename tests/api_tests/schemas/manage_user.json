@@ -1,0 +1,474 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "objects": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "email": {
+              "type": "string"
+            },
+            "is_active": {
+              "type": "boolean"
+            },
+            "is_superuser": {
+              "type": "boolean"
+            },
+            "is_verified": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": "string"
+            },
+            "role": {
+              "type": "integer"
+            },
+            "permissions": {
+              "type": "object",
+              "properties": {
+                "can_edit_card": {
+                  "type": "boolean"
+                },
+                "show_own_info": {
+                  "type": "boolean"
+                },
+                "can_block_card": {
+                  "type": "boolean"
+                },
+                "can_edit_users": {
+                  "type": "boolean"
+                },
+                "can_create_card": {
+                  "type": "boolean"
+                },
+                "can_freeze_card": {
+                  "type": "boolean"
+                },
+                "can_top_up_card": {
+                  "type": "boolean"
+                },
+                "can_create_group": {
+                  "type": "boolean"
+                },
+                "can_invite_users": {
+                  "type": "boolean"
+                },
+                "enable_manage_tab": {
+                  "type": "boolean"
+                },
+                "can_set_card_limit": {
+                  "type": "boolean"
+                },
+                "can_top_up_bill_pay": {
+                  "type": "boolean"
+                },
+                "show_own_group_info": {
+                  "type": "boolean"
+                },
+                "can_deposit_bill_pay": {
+                  "type": "boolean"
+                },
+                "can_change_cardholder": {
+                  "type": "boolean"
+                },
+                "can_withdraw_bill_pay": {
+                  "type": "boolean"
+                },
+                "can_set_autotopup_card": {
+                  "type": "boolean"
+                },
+                "can_withdrawal_from_card": {
+                  "type": "boolean"
+                },
+                "can_invite_users_own_group": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "can_edit_card",
+                "show_own_info",
+                "can_block_card",
+                "can_edit_users",
+                "can_create_card",
+                "can_freeze_card",
+                "can_top_up_card",
+                "can_create_group",
+                "can_invite_users",
+                "enable_manage_tab",
+                "can_set_card_limit",
+                "can_top_up_bill_pay",
+                "show_own_group_info",
+                "can_deposit_bill_pay",
+                "can_change_cardholder",
+                "can_withdraw_bill_pay",
+                "can_set_autotopup_card",
+                "can_withdrawal_from_card",
+                "can_invite_users_own_group"
+              ]
+            },
+            "user_balances": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                }
+              ]
+            },
+            "card_balances": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                }
+              ]
+            },
+            "total_balances": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "currency": {
+                      "type": "string"
+                    },
+                    "balance": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "currency",
+                    "balance"
+                  ]
+                }
+              ]
+            },
+            "group": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "name"
+              ]
+            },
+            "spent": {
+              "type": "object",
+              "properties": {
+                "current_day": {
+                  "type": "null"
+                },
+                "current_month": {
+                  "type": "null"
+                },
+                "previous_month": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "current_day",
+                "current_month",
+                "previous_month"
+              ]
+            },
+            "decline_percent": {
+              "type": "object",
+              "properties": {
+                "current_day": {
+                  "type": "null"
+                },
+                "current_month": {
+                  "type": "null"
+                },
+                "previous_month": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "current_day",
+                "current_month",
+                "previous_month"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "email",
+            "is_active",
+            "is_superuser",
+            "is_verified",
+            "name",
+            "role",
+            "permissions",
+            "user_balances",
+            "card_balances",
+            "total_balances",
+            "group",
+            "spent",
+            "decline_percent"
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "integer"
+        },
+        "page": {
+          "type": "integer"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "count_by_cards_states": {
+          "type": "object",
+          "properties": {
+            "1": {
+              "type": "integer"
+            },
+            "2": {
+              "type": "integer"
+            },
+            "3": {
+              "type": "integer"
+            },
+            "4": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "count_by_roles": {
+          "type": "object",
+          "properties": {
+            "1": {
+              "type": "integer"
+            },
+            "2": {
+              "type": "integer"
+            },
+            "3": {
+              "type": "integer"
+            },
+            "4": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "count_by_states": {
+          "type": "object",
+          "properties": {
+            "active": {
+              "type": "integer"
+            },
+            "inactive": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "active",
+            "inactive"
+          ]
+        },
+        "card_balance": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "total"
+          ]
+        },
+        "account_balance": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number"
+            },
+            "USD": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "total",
+            "USD"
+          ]
+        },
+        "total_balance": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number"
+            },
+            "USD": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "total",
+            "USD"
+          ]
+        }
+      },
+      "required": [
+        "total",
+        "page",
+        "count",
+        "count_by_cards_states",
+        "count_by_roles",
+        "count_by_states",
+        "card_balance",
+        "account_balance",
+        "total_balance"
+      ]
+    }
+  },
+  "required": [
+    "objects",
+    "meta"
+  ]
+}
