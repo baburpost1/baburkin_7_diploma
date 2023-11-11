@@ -23,3 +23,8 @@ def test_check_users_info(login_session, close_session):
     user = manage_user_slave_response.json()['objects']
     assert len(user) == 1
     validate_schema(user[0], 'user.json')
+
+    #      проверяем что не можем получить информацию по пользователю не из команды
+    users_not_from_your_command_response = requests.get(manage_user_slave_url, params={'user_id': 1})
+    assert_status_code(users_not_from_your_command_response, 200)
+    assert len(users_not_from_your_command_response.json()['objects']) == 0
