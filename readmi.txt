@@ -4,9 +4,9 @@
 
 API тесты
 1.попытка в деморежиме создать карту - DONE
-2.Попытаться обменять деньги при отсутствии их на аккаунте
+2.Попытаться обменять деньги при отсутствии их на аккаунте  GET https://my.combo.cards/api/bank_accounts/convert?from_currency=USD&to_currency=HKD&reverse=false&amount=10 - DONE
 3.https://my.combo.cards/manage/4424 - проверить что есть инфомация по твоему пользователю из твоей команды 4424, но нет информации по польователю 1, например - DONE
-4.Попытка списать на баланс овнера отрицательную сумму  https://my.combo.cards/api/bank_accounts/transfer?user_id=4424&action=withdraw&amount=10
+4.Попытка списать на баланс овнера отрицательную сумму  https://my.combo.cards/api/bank_accounts/transfer?user_id=4424&action=withdraw&amount=10 - DONE
 
 Надо:
 1.Добавить аллюр на проект

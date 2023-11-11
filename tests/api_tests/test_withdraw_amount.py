@@ -1,8 +1,7 @@
 from tests.conftest import login_session, close_session
 from tests.api_tests.utils.links import get_full_api_url
 from tests.api_tests.utils.routes import ComboCards
-from tests.api_tests.utils.validations import assert_status_code, validate_schema
-
+from tests.api_tests.utils.validations import assert_status_code
 
 
 def test_withdraw_amount(login_session, close_session):

@@ -7,3 +7,4 @@ class ComboCards(str, Enum):
     MANAGE = 'manage'
     USERS = 'users'
     TRANSFER = 'bank_accounts/transfer'
+    CONVERT = 'bank_accounts/convert'
