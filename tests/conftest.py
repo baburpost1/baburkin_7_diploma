@@ -1,5 +1,6 @@
 import pytest
 import os
+import requests
 from selene import browser, be, query
 from tests.pages import loginpage, wallet, settings
 from selenium import webdriver
@@ -41,3 +42,17 @@ def return_english_language(config_browser):
     if settings_page.element(settings.header_language).get(query.text) == 'Язык':
         settings_page.element(settings.select_language).click()
         settings_page.element(settings.span_eng).click()
+
+
+@pytest.fixture
+def login_session():
+    load_dotenv()
+    login = requests.Session()
+    login.post(url=f'{os.getenv("API_BASE_URL")}/login?fingerprint=1650830455',
+               data={'username': os.getenv('LOGIN'), 'password': os.getenv('PASSWORD')})
+    return login
+
+
+@pytest.fixture()
+def close_session(login_session):
+    yield login_session.close()
