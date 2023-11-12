@@ -15,6 +15,7 @@ def test_demomode(login_pp, config_browser):
     card_builder_page.wait_until(card_builder_page.element('[id="cube-loader"]').should(be.visible))
     card_builder_page.element(card_builder.input_cart_name).click().type('test')
     card_builder_page.element(card_builder.select_source).click()
+    card_builder_page.element(card_builder.input_provider).send_keys(474359)
     card_builder_page.element(card_builder.source_first).click()
     card_builder_page.element(card_builder.select_type).click()
     card_builder_page.element(card_builder.limit_type).click()
