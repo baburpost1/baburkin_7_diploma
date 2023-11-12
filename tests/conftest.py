@@ -17,6 +17,7 @@ def config_browser():
     browser.config.window_width = 1600
     browser.config.base_url = 'https://my.combo.cards/'
     browser_version = "100.0"
+    browser.config.timeout = 10
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
