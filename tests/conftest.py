@@ -10,11 +10,12 @@ from tests.utils import attach
 
 
 @pytest.fixture()
-def setup_browser():
+def config_browser():
     # Список всех доступных парамеров https://peter.sh/experiments/chromium-command-line-switches/
 
     browser.config.window_height = 1400
     browser.config.window_width = 1600
+    browser.config.base_url = 'https://my.combo.cards/'
     browser_version = "100.0"
     options = Options()
     selenoid_capabilities = {
@@ -45,10 +46,10 @@ def setup_browser():
     browser.quit()
 
 
-@pytest.fixture(scope='function', autouse=True)
-def config_browser(setup_browser):
-    driver = webdriver.Chrome()
-    browser.config.base_url = 'https://my.combo.cards/'
+# @pytest.fixture(scope='function', autouse=True)
+# def config_browser(setup_browser):
+#     driver = webdriver.Chrome()
+#     browser.config.base_url = 'https://my.combo.cards/'
 
 
 @pytest.fixture()
