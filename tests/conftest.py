@@ -9,44 +9,46 @@ from dotenv import load_dotenv
 from tests.utils import attach
 
 
+@pytest.fixture()
+def setup_browser():
+    # Список всех доступных парамеров https://peter.sh/experiments/chromium-command-line-switches/
+
+    browser.config.window_height = 1400
+    browser.config.window_width = 1600
+    browser_version = "100.0"
+    options = Options()
+    selenoid_capabilities = {
+        "browserName": "chrome",
+        "browserVersion": browser_version,
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": True
+        }
+    }
+    login = os.getenv('SELEN_LOGIN')
+    password = os.getenv('SELEN_PASSWORD')
+    options.capabilities.update(selenoid_capabilities)
+    driver = webdriver.Remote(
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        options=options
+    )
+
+    browser.config.driver = driver
+
+    yield
+
+    attach.add_html(browser)
+    attach.add_screenshot(browser)
+    # attach.add_video(browser)
+    attach.add_logs(browser)
+
+    browser.quit()
+
+
 @pytest.fixture(scope='function', autouse=True)
-def config_browser():
+def config_browser(setup_browser):
     driver = webdriver.Chrome()
     browser.config.base_url = 'https://my.combo.cards/'
-
-    def setup_browser():
-        # Список всех доступных парамеров https://peter.sh/experiments/chromium-command-line-switches/
-
-        browser.config.window_height = 1400
-        browser.config.window_width = 1600
-        browser_version = "100.0"
-        options = Options()
-        selenoid_capabilities = {
-            "browserName": "chrome",
-            "browserVersion": browser_version,
-            "selenoid:options": {
-                "enableVNC": True,
-                "enableVideo": True
-            }
-        }
-        login = os.getenv('SELEN_LOGIN')
-        password = os.getenv('SELEN_PASSWORD')
-        options.capabilities.update(selenoid_capabilities)
-        driver = webdriver.Remote(
-            command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
-            options=options
-        )
-
-        browser.config.driver = driver
-
-        yield
-
-        attach.add_html(browser)
-        attach.add_screenshot(browser)
-        # attach.add_video(browser)
-        attach.add_logs(browser)
-
-        browser.quit()
 
 
 @pytest.fixture()
