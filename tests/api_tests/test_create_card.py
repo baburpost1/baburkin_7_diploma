@@ -1,7 +1,7 @@
 from tests.conftest import login_session, close_session
-from utils.validations import assert_status_code
-from utils.links import get_full_api_url
-from utils.routes import ComboCards
+from tests.api_tests.utils.validations import assert_status_code
+from tests.api_tests.utils.links import get_full_api_url
+from tests.api_tests.utils.routes import ComboCards
 
 
 
