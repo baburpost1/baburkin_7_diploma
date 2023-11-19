@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
 from tests.utils import attach
-from pytest import step
+from allure import step
 
 
 @pytest.fixture()
