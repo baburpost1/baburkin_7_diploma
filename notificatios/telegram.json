@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "ComboCards",
+    "environment": "some env",
+    "comment": "some comment",
+    "reportLink": "",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6542506989:AAHQtEM1Y7cMM4FCaABi1C77TVNfTejrzmw",
+    "chat": "-4000953804",
+    "replyTo": ""
+  }
+}
