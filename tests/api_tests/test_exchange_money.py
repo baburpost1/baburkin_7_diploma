@@ -2,8 +2,10 @@ from tests.conftest import login_session, close_session
 from tests.api_tests.utils.links import get_full_api_url
 from tests.api_tests.utils.routes import ComboCards
 from tests.api_tests.utils.validations import assert_status_code
+import allure
+from allure import step
 
-
+@allure.feature('Создание карты в деморежиме')
 def test_exchange_money(login_session, close_session):
     requests = login_session
     convert_url = get_full_api_url(ComboCards.CONVERT)
