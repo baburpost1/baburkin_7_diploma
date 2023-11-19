@@ -3,8 +3,10 @@ from tests.api_tests.utils.links import get_full_api_url
 from tests.api_tests.utils.routes import ComboCards
 from tests.api_tests.utils.validations import assert_status_code, validate_schema
 from allure import step
+import allure
 
 
+@allure.feature('Проверка доступнойинформации для пользователя')
 def test_check_users_info(login_session, close_session):
     requests = login_session
     with step('Получаем список всех доступных пользователей'):
