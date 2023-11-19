@@ -14,7 +14,7 @@ def test_check_users_info(login_session, close_session):
     for user in all_users.json()['objects']:
         validate_schema(user, 'user.json')
 
-    with step('Смена языка на EN'):
+    with step('Получение списка всех подчинённых'):
         slave_user_id = []
         for user in all_users.json()['objects']:
             if user['role'] == 2:
@@ -27,7 +27,7 @@ def test_check_users_info(login_session, close_session):
         assert len(user) == 1
         validate_schema(user[0], 'user.json')
 
-    #      проверяем что не можем получить информацию по пользователю не из команды
-    users_not_from_your_command_response = requests.get(manage_user_slave_url, params={'user_id': 1})
-    assert_status_code(users_not_from_your_command_response.status_code, 200)
-    assert len(users_not_from_your_command_response.json()['objects']) == 0
+    with step('Проверка что подчинённый не может получить информацию по головной группе')
+        users_not_from_your_command_response = requests.get(manage_user_slave_url, params={'user_id': 1})
+        assert_status_code(users_not_from_your_command_response.status_code, 200)
+        assert len(users_not_from_your_command_response.json()['objects']) == 0
