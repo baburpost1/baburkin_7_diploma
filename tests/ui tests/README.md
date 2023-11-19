@@ -74,4 +74,4 @@ allure serve allure-results
 <img src="images/allure_suits.png">
 
 ### В проекте настроена отправка краткого отчета в Telegram
-<img src="images/screenshots/tg_web_allure.png">
+<img src="images/tg.png">
