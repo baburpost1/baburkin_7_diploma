@@ -5,13 +5,12 @@ Issue cards with no limits, manage expenses, and scale marketing campaigns in ju
 
 ###  Используемые технологии
 <p align="center">
-  <code><img src="images/icons/python.svg" width="40" height="40"  alt="A-d-am" title="Python"></code>
-  <code><img src="images/icons/pytest.svg" width="40" height="40"  alt="A-d-am" title="PyTest"></code>
-  <code><img src="images/icons/jenkins.svg" width="40" height="40"  alt="A-d-am" title="Selene"></code>
-  <code><img src="images/icons/github.png" width="40" height="40"  alt="A-d-am" title="PyCharm"></code>
-  <code><img src="images/icons/requests.png" width="40" height="40"  alt="A-d-am" title="Selenoid"></code>
-  <code><img src="images/icons/allure.png" width="40" height="40"  alt="A-d-am" title="Allure Report"></code>
-  <code><img src="images/icons/telegram.png" width="40" height="40"  alt="A-d-am" title="Telegram Bot"></code>
+  <code><img src="../../images/icons/python.svg" width="40" height="40"  alt="A-d-am" title="Python"></code>
+  <code><img src="../../images/icons/pytest.svg" width="40" height="40"  alt="A-d-am" title="PyTest"></code>
+  <code><img src="../../images/icons/jenkins.svg" width="40" height="40"  alt="A-d-am" title="Selene"></code>
+  <code><img src="../../images/icons/github.png" width="40" height="40"  alt="A-d-am" title="PyCharm"></code>
+  <code><img src="../../images/icons/allure.png" width="40" height="40"  alt="A-d-am" title="Allure Report"></code>
+  <code><img src="../../images/icons/telegram.png" width="40" height="40"  alt="A-d-am" title="Telegram Bot"></code>
 </p>
 
 ## Тестируемый функционал:
@@ -26,7 +25,7 @@ Issue cards with no limits, manage expenses, and scale marketing campaigns in ju
 ## Запуск тестов
 #### Все UI тесты запускаются удалённо (Jenkins), но их можно запустить и локально
 <video width="600" height="500" controls>
-  <source src="images/test_video.mp4" type="video/mp4">
+  <source src="../../images/test_video.mp4" type="video/mp4">
 </video>
 
 ### Локально
@@ -54,7 +53,7 @@ pytest .
  - Открыть [джоб](https://jenkins.autotests.cloud/job/job/007_babur_diplom) в jenkins
  - Нажать на Build
 
-<img src="images/jenkins_1.png">
+<img src="../../images/jenkins_1.png">
 
 ## Отчет о прохождении тестов (Allure)
 ### Локально
@@ -71,11 +70,11 @@ allure serve allure-results
 Для получения отчета нужно нажать на иконку allure report'a в строке билда  
 <img src="images/jenkins_2.png">
 ### Общая информация по тестовому прогону
-<img src="images/allure_dashboard.png">
+<img src="../../images/allure_dashboard.png">
 
 ### Для каждого теста прикладываются логи браузера, скириншоты и видео выполнения теста
-<img src="images/allure_suits.png">
+<img src="../../images/allure_suits.png">
 
 ### В проекте настроена отправка краткого отчета в Telegram
-<img src="images/tg.png">
+<img src="../../images/tg.png">
 
