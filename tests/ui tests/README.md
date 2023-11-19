@@ -25,6 +25,9 @@ Issue cards with no limits, manage expenses, and scale marketing campaigns in ju
 
 ## Запуск тестов
 #### Все UI тесты запускаются удалённо (Jenkins), но их можно запустить и локально
+<video width="600" height="500" controls>
+  <source src="images/test_video.mp4" type="video/mp4">
+</video>
 
 ### Локально
 Важно! Перед запуском нужно создать файл .env и указать все параметры которые перечислены в .env-example 
@@ -75,3 +78,4 @@ allure serve allure-results
 
 ### В проекте настроена отправка краткого отчета в Telegram
 <img src="images/tg.png">
+
