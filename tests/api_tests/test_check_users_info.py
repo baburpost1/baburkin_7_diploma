@@ -6,7 +6,7 @@ from allure import step
 import allure
 
 
-@allure.feature('Проверка доступнойинформации для пользователя')
+@allure.feature('Проверка доступной информации для пользователя')
 def test_check_users_info(login_session, close_session):
     requests = login_session
     with step('Получаем список всех доступных пользователей'):

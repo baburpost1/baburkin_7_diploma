@@ -5,6 +5,7 @@ from tests.api_tests.utils.validations import assert_status_code
 import allure
 from allure import step
 
+
 @allure.feature('Создание карты в деморежиме')
 def test_exchange_money(login_session, close_session):
     requests = login_session
@@ -13,7 +14,8 @@ def test_exchange_money(login_session, close_session):
                                     params={'from_currency': 'USD', 'to_currency': 'HKD', 'reverse': 'false',
                                             'amount': 10})
     assert_status_code(convert_response.status_code, 400)
-    assert convert_response.text ==  '{"detail":"Not enough money"}'
+    assert convert_response.text == '{"detail":"Not enough money"}'
+
 
 def test_convert_money_negative_amount(login_session, close_session):
     requests = login_session
