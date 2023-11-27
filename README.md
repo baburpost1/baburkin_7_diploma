@@ -30,11 +30,9 @@ Issue cards with no limits, manage expenses, and scale marketing campaigns in ju
 3. Изменение языка интерфейса на русский и на английский
 4. Добавление крипто-кошелька для ввода средств на баланс и последующее его удаление
 
-## Видео прогона UI тестов^
+## Видео прогона UI тестов
 #### Все UI тесты запускаются удалённо (Jenkins), но их можно запустить и локально
-<video width="600" height="500" controls>
-  <source src="images/test_video.mp4" type="video/mp4">
-</video>
+<img src="images/test_video.gif"  alt="BAN">
 
 ## Запуск тестов
 
