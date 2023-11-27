@@ -26,4 +26,4 @@ def test_create_card(login_session, close_session):
 
     assert_status_code(response.status_code, 400)
     with step('Проверка текста ответа'):
-        assert response.text == "{\"detail\":\"Demo user can't create cards\"}"
+        assert response.text == "{\"detail\":\"You can't create new cards\"}"
